@@ -1,22 +1,22 @@
 {
-  "name": "generator-meteor",
-  "version": "1.1.3",
-  "description": "A Meteor app generator for Yeoman",
+  "name": "generator-luma",
+  "version": "0.0.1",
+  "description": "A Meteor app generator for Luma Pictures",
   "keywords": [
     "yeoman-generator",
-    "meteor"
+    "luma"
   ],
-  "homepage": "https://github.com/Pent/generator-meteor",
-  "bugs": "https://github.com/Pent/generator-meteor/issues",
+  "homepage": "https://github.com/lumapictures/generator-luma",
+  "bugs": "https://github.com/Pent/generator-luma/issues",
   "author": {
-    "name": "pent",
-    "email": "jon@empire5design.com",
-    "url": "https://github.com/Pent"
+    "name": "austinrivas",
+    "email": "austinrivas@gmail.com",
+    "url": "https://github.com/austinrivas"
   },
   "main": "app/index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/Pent/generator-meteor.git"
+    "url": "git://github.com/lumapictures/generator-luma.git"
   },
   "scripts": {
     "test": "mocha"

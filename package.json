@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "A Meteor app generator for Luma Pictures",
   "keywords": [
-    "yeoman-generator",
+    "luma-generator",
+    "luma ui",
     "luma"
   ],
   "homepage": "https://github.com/lumapictures/generator-luma",

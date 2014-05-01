@@ -1,4 +1,4 @@
-# generator-meteor [![Build Status](https://secure.travis-ci.org/Pent/generator-meteor.png?branch=master)](https://travis-ci.org/Pent/generator-meteor)
+# generator-luma [![Build Status](https://secure.travis-ci.org/LumaPictures/generator-luma.png?branch=master)](https://travis-ci.org/LumaPictures/generator-luma)
 
 A [Meteor](http://meteor.com) project generator for [Yeoman](http://yeoman.io).
 
@@ -23,10 +23,10 @@ $ npm install -g yo
 
 ### The Best Instructions You'll See All Day
 
-To install generator-meteor from npm, run:
+To install generator-luma from npm, run:
 
 ```
-$ npm install -g generator-meteor
+$ npm install -g generator-luma
 ```
 
 Create a new project directory:
@@ -53,8 +53,8 @@ Finally, run Meteor:
 $ meteor
 ```
 
-## *NEW* View and Collection Generators
-Generator-Meteor now supports primitive scaffolding using Yeoman sub-generators
+## View and Collection Generators
+generator-luma now supports primitive scaffolding using Yeoman sub-generators
 
 To generate a new Meteor Collection, try using:
 

@@ -1,4 +1,4 @@
-# # <%= classyName %>
+# # <%= name %>
 
 # ###### <%= name %>.created()
 Template.<%= name %>.created = -> return
@@ -11,3 +11,6 @@ Template.<%= name %>.destroyed = -> return
 
 # ###### <%= name %>.events()
 Template.<%= name %>.events {}
+
+# ##### <%= name %>.helpers()
+Template.<%= name %>View.helpers {}

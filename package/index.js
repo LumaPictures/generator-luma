@@ -34,7 +34,8 @@ Generator.prototype.createPackageFiles = function createPackageFiles() {
   this.writeTemplate('package/example/client/index.html', path.join('example/client/index.html'));
   this.writeTemplate('package/example/client/lib/example.controller.coffee', path.join("example/client/lib/example.controller.coffee"));
   this.writeTemplate('package/example/client/main.less', path.join("example/client/main.less"));
-  this.writeTemplate('package/example/client/views/pages/home/home.html', path.join("example/client/main.less"))
+  this.writeTemplate('package/example/client/views/pages/home/home.html', path.join("example/client/views/pages/home/home.html"));
+  this.writeTemplate('package/example/client/views/pages/home/home.coffee', path.join("example/client/views/pages/home/home.coffee"));
 
   this.writeTemplate('package/example/packages/.gitignore', path.join("example/packages/.gitignore"));
 

@@ -16,7 +16,7 @@ util.inherits(Generator, scriptBase);
 
 Generator.prototype.createCollectionEntries = function createCollectionEntries() {
   //todo add collection entries to end of file
-  this.writeTemplate('client/lib/subscriptions.js', path.join('client/lib/', this.name.toLowerCase() + '.js'));
-  this.writeTemplate('lib/collections.js', path.join('lib/', this.name.toLowerCase() + '.js'));
-  this.writeTemplate('server/publications.js', path.join('server/', this.name.toLowerCase() + '.js'));
+  this.writeTemplate('client/lib/subscriptions.coffee', path.join('client/lib/', this.name.toLowerCase() + '.coffee'));
+  this.writeTemplate('lib/collections.coffee', path.join('lib/', this.name.toLowerCase() + '.coffee'));
+  this.writeTemplate('server/publications.coffee', path.join('server/', this.name.toLowerCase() + '.coffee'));
 };

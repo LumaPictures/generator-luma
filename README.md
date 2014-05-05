@@ -1,8 +1,8 @@
 # generator-luma [![Build Status](https://secure.travis-ci.org/LumaPictures/generator-luma.png?branch=master)](https://travis-ci.org/LumaPictures/generator-luma)
 
-A [Meteor](http://meteor.com) project generator for [Yeoman](http://yeoman.io).
+A [Meteor](http://meteor.com) project generator for Luma Pictures.
 
-[![NPM](https://nodei.co/npm/generator-meteor.png)](https://nodei.co/npm/generator-meteor/)
+[![NPM](https://nodei.co/npm/generator-luma.png)](https://nodei.co/npm/generator-luma/)
 
 ## Prerequisites
 * [Meteorite](https://github.com/oortcloud/meteorite)
@@ -38,7 +38,7 @@ $ mkdir your-new-project && cd $_
 Initiate the generator:
 
 ```
-$ yo meteor
+$ yo luma
 ```
 
 Sync the smart.json packages using Meteorite:
@@ -59,13 +59,13 @@ generator-luma now supports primitive scaffolding using Yeoman sub-generators
 To generate a new Meteor Collection, try using:
 
 ```
-$ yo meteor:collection yourCollectionName
+$ yo luma:collection yourCollectionName
 ```
 
 To generate a new Meteor Template view/events/helper, try this one out:
 
 ```
-$ yo meteor:view viewName
+$ yo luma:view viewName
 ```
 
 These generators will be extended over time and I hope you make good use of them!

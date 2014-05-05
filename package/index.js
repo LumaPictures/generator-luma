@@ -25,15 +25,16 @@ Generator.prototype.createPackageFiles = function createPackageFiles() {
   this.writeTemplate('package/lib/package.coffee', path.join('lib/', this.name.toLowerCase() + '.coffee'));
   this.writeTemplate('package/tests/package.test.coffee', path.join('tests/', this.name.toLowerCase() + '.test.coffee'));
 
-  this.writeTemplate('package/example/index.html', path.join('example/index.html'));
   this.writeTemplate('package/example/smart.json', path.join('example/smart.json'));
   this.writeTemplate('package/example/routes.coffee', path.join('example/routes.coffee'));
 
   this.writeTemplate('package/example/.meteor/.gitignore', path.join("example/.meteor/.gitignore"));
   this.writeTemplate('package/example/.meteor/packages', path.join("example/.meteor/packages"));
 
+  this.writeTemplate('package/example/client/index.html', path.join('example/client/index.html'));
   this.writeTemplate('package/example/client/lib/example.controller.coffee', path.join("example/client/lib/example.controller.coffee"));
   this.writeTemplate('package/example/client/main.less', path.join("example/client/main.less"));
+  this.writeTemplate('package/example/client/views/pages/home/home.html', path.join("example/client/main.less"))
 
   this.writeTemplate('package/example/packages/.gitignore', path.join("example/packages/.gitignore"));
 

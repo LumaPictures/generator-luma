@@ -56,6 +56,12 @@ $ meteor
 ## View and Collection Generators
 generator-luma now supports primitive scaffolding using Yeoman sub-generators
 
+To generate a new Meteor Package use :
+
+```
+$ yo luma:package yourPackageName
+```
+
 To generate a new Meteor Collection, try using:
 
 ```

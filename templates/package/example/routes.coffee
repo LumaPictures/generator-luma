@@ -7,7 +7,7 @@ Router.addRoutes [{
     subtitle: ""
 },{
   route: 'gitHub'
-  path: "https://github.com/lumapictures/meteor-<%= name %>"
+  path: "https://github.com/<%= owner %>/<%= repoName %>"
   external: true
   page:
     title: "GitHub"
@@ -17,14 +17,14 @@ Router.addRoutes [{
     icon: 'icon-github'
 },{
   route: 'reportBugs'
-  path: "https://github.com/lumapictures/meteor-<%= name %>/issues/new"
+  path: "https://github.com/<%= owner %>/<%= repoName %>/issues/new"
   external: true
   page:
     title: "Report Bugs"
     subtitle: "GitHub Issues"
 },{
   route: 'source'
-  path: "http://lumapictures.github.io/meteor-<%= name %>/"
+  path: "http://<%= owner %>.github.io/<%= repoName %>/"
   external: true
   page:
     title: "Annotated Source"
@@ -34,7 +34,7 @@ Router.addRoutes [{
     icon: 'icon-code'
 },{
   route: 'build'
-  path: "https://travis-ci.org/LumaPictures/meteor-<%= name %>"
+  path: "https://travis-ci.org/<%= owner %>/<%= repoName %>"
   external: true
   page:
     title: "Build Status"

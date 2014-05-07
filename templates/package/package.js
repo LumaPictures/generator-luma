@@ -1,5 +1,5 @@
 Package.describe({
-  summary: ""
+  summary: "<%= description %>"
 });
 
 Package.on_use(function (api, where) {

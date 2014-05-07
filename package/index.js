@@ -14,6 +14,45 @@ var Generator = module.exports = function Generator() {
 
 util.inherits(Generator, scriptBase);
 
+Generator.prototype.askForPackage = function askForPackage() {
+  var cb = this.async(),
+    prompts = [{
+      type: 'input',
+      name: 'description',
+      message: 'How would you describe this package?'
+    }, {
+      type: 'input',
+      name: 'authorName',
+      message: 'Who are you?'
+    }, {
+      type: 'input',
+      name: 'authorEmail',
+      message: 'What is your email?'
+    }, {
+      type: 'input',
+      name: 'authorWebsite',
+      message: 'What is your website?'
+    }, {
+      type: 'input',
+      name: 'owner',
+      message: 'What GitHub account owns this repo?'
+    }, {
+      type: 'input',
+      name: 'repoName',
+      message: 'What is the name of this GitHub repo?'
+    }];
+
+  this.prompt(prompts, function (answers) {
+    this.description = answers.description;
+    this.authorName = answers.authorName;
+    this.authorEmail = answers.authorEmail;
+    this.authorWebsite = answers.authorWebsite;
+    this.owner = answers.owner;
+    this.repoName = answers.repoName;
+    cb();
+  }.bind(this));
+};
+
 Generator.prototype.createPackageFiles = function createPackageFiles() {
   this.writeTemplate('package/smart.json', path.join('smart.json'));
   this.writeTemplate('package/package.js', path.join('package.js'));

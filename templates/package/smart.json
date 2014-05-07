@@ -1,9 +1,9 @@
 {
   "name": "<%= name %>",
-  "description": "",
-  "homepage": "https://github.com/lumapictures/meteor-<%= name %>",
-  "author": "",
+  "description": "<%= description %>",
+  "homepage": "https://github.com/<%= owner %>/<%= repoName %>",
+  "author": "<%= authorName %> <<%= authorEmail %>> (<%= authorWebsite %>)",
   "version": "0.0.1",
-  "git": "https://github.com/lumapictures/meteor-<%= name %>",
+  "git": "https://github.com/<%= owner %>/<%= repoName %>",
   "packages": {}
 }

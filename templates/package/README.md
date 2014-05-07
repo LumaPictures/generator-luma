@@ -1,22 +1,20 @@
-# <%= name %> [![Build Status](https://travis-ci.org/LumaPictures/meteor-<%= name %>.svg?branch=master)](https://travis-ci.org/LumaPictures/meteor-<%= name %>)
-### Subtitle
+# <%= name %> [![Build Status](https://travis-ci.org/<%= owner %>/<%= repoName %>.svg?branch=master)](https://travis-ci.org//<%= owner %>/<%= repoName %>)
+### <%= description %>
 
-## [Live Example](http://<%= name %>.meteor.com)
+## [Live Example](http://<%= repoName %>.meteor.com)
 
 ## Local Example
 ```
-$ git clone https://github.com/lumapictures/meteor-<%= name %>
-$ cd meteor-<%= name %>/example
-$ mrt add <%= name %>
-$ meteor
+$ git clone https://github.com/<%= owner %>/<%= repoName %>
+$ cd <%= owner %>/<%= repoName %>
+$ mrt && meteor
 ```
 
 ## Local Tests
 ```
-$ git clone https://github.com/lumapictures/meteor-<%= name %>
-$ cd meteor-<%= name %>/example
-$ mrt add <%= name %>
-$ meteor test-packages <%= name %>
+$ git clone https://github.com/<%= owner %>/<%= repoName %>
+$ cd <%= owner %>/<%= repoName %>
+$ mrt && meteor test-packages <%= name %>
 ```
 
 ## Usage

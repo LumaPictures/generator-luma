@@ -32,4 +32,4 @@ if Meteor.isClient
 # Components are client only by default, but if you need to have a presence on the server you can define server mixins.
 else if Meteor.isServer
   # `<%= classyName %>Component = _.extend {}, <%= classyName %>Mixins.Debug`
-  <%= classyName %>Component = _.extend {}, <%= classyName %>Mixins.Debug`
+  <%= classyName %>Component = _.extend {}, <%= classyName %>Mixins.Debug

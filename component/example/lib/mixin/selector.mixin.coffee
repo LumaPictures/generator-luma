@@ -1,5 +1,6 @@
 # # Example Instance
 ExampleMixins.Selector =
+  # ##### setSelector()
   setSelector: ( selector ) ->
     Match.test selector, String
     @setData 'selector', selector

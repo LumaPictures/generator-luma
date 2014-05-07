@@ -1,14 +1,12 @@
 # # <%= classyName %> Template
 # #### `template` String ( optional )
 # The name of template that you want to render for this component.
-# Default is `default_<%= name %>_template` found [here](lib/<%= name %>.html).
-# You can set your default template by assigning the template name to `Template.<%= name %>.defaultTemplate`.
+# Default is `default_<%= name %>_template` which you can set by setting `Template.<%= name %>.defaultTemplate`.
 <%= classyName %>Mixins.Template =
-  # ##### Default Table Template
-  # The default table template is defined in datatables.html.
+  # ##### Default Template
   defaultTemplate: 'default_<%= name %>_template'
 
-  # ##### chooseTemplate Helper
+  # ##### chooseTemplate()
   # Return the template specified in the component parameters
   chooseTemplate: ( template = null ) ->
     # Set table template to default if no template name is passed in

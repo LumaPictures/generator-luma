@@ -1,5 +1,6 @@
 # # <%= classyName %> Instance
 <%= classyName %>Mixins.Selector =
+  # ##### setSelector()
   setSelector: ( selector ) ->
     Match.test selector, String
     @setData 'selector', selector

@@ -1,7 +1,7 @@
 class @ExampleController extends PackageLayoutController
   data: ->
     @data.package =
-      name: "<%= classyName %>"
+      name: "<%= name %>"
       description: ""
       owner: "LumaPictures"
       repo: "meteor-<%= name %>"

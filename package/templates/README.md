@@ -1,4 +1,4 @@
-# <%= name %> [![Build Status](https://travis-ci.org/<%= owner %>/<%= repoName %>.svg?branch=master)](https://travis-ci.org//<%= owner %>/<%= repoName %>)
+# <%= name %> [![Build Status](https://travis-ci.org/<%= owner %>/<%= repoName %>.svg?branch=master)](https://travis-ci.org/<%= owner %>/<%= repoName %>)
 ### <%= description %>
 
 ## [Live Example](http://<%= name %>.meteor.com)

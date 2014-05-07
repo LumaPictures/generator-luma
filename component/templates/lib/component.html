@@ -1,0 +1,17 @@
+<template name="<%= name %>">
+    <div id="{{selector}}" class="<%= name %>-container">
+        {{#if UI.contentBlock }}
+            {{> UI.contentBlock }}
+        {{else}}
+            {{#with chooseTemplate template }}
+                {{#with .. }}     {{! original arguments to <%= name %>}}
+                    {{> .. }}     {{! return value from Template.<%= name %>.chooseTemplate( template ) }}
+                {{/with}}
+            {{/with}}
+        {{/if}}
+    </div>
+</template>
+
+<template name="default_<%= name %>_template">
+    <code class="{{../../styles}}">default_<%= name %>_template needs to be setup</code>
+</template>

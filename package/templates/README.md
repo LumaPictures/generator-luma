@@ -1,7 +1,7 @@
 # <%= name %> [![Build Status](https://travis-ci.org/<%= owner %>/<%= repoName %>.svg?branch=master)](https://travis-ci.org//<%= owner %>/<%= repoName %>)
 ### <%= description %>
 
-## [Live Example](http://<%= repoName %>.meteor.com)
+## [Live Example](http://<%= name %>.meteor.com)
 
 ## Local Example
 ```

@@ -5,14 +5,14 @@ var path    = require('path');
 var helpers = require('yeoman-generator').test;
 
 
-describe('meteor generator', function () {
+describe('luma generator', function () {
   beforeEach(function (done) {
     helpers.testDirectory(path.join(__dirname, 'temp'), function (err) {
       if (err) {
         return done(err);
       }
 
-      this.app = helpers.createGenerator('meteor:app', [
+      this.app = helpers.createGenerator('luma:app', [
         '../../app'
       ]);
       done();

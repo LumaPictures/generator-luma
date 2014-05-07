@@ -1,17 +1,26 @@
 environment = process.env.METEOR_ENV or "development"
 
+defaults =
+  public:
+    package:
+      name: "<%= name %>"
+      description: "<%= description %>"
+      owner: "<%= owner %>"
+      repo: "<%= repoName %>"
+  private: {}
+
 settings =
   development:
-    public: {}
-    private:{}
+    public: _.defaults {}, defaults.public
+    private:_.defaults {}, defaults.private
 
   staging:
-    public: {}
-    private: {}
+    public: _.defaults {}, defaults.public
+    private: _.defaults {}, defaults.private
 
   production:
-    public: {}
-    private: {}
+    public: _.defaults {}, defaults.public
+    private: _.defaults {}, defaults.private
 
 unless process.env.METEOR_SETTINGS
   console.log "No METEOR_SETTINGS passed in, using locally defined settings."

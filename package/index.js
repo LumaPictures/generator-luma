@@ -18,6 +18,14 @@ Generator.prototype.askForPackage = function askForPackage() {
   var cb = this.async(),
     prompts = [{
       type: 'input',
+      name: 'repoName',
+      message: 'What is the name of this GitHub repo?'
+    }, {
+      type: 'input',
+      name: 'owner',
+      message: 'What GitHub account owns this repo?'
+    }, {
+      type: 'input',
       name: 'description',
       message: 'How would you describe this package?'
     }, {
@@ -32,14 +40,6 @@ Generator.prototype.askForPackage = function askForPackage() {
       type: 'input',
       name: 'authorWebsite',
       message: 'What is your website?'
-    }, {
-      type: 'input',
-      name: 'owner',
-      message: 'What GitHub account owns this repo?'
-    }, {
-      type: 'input',
-      name: 'repoName',
-      message: 'What is the name of this GitHub repo?'
     }];
 
   this.prompt(prompts, function (answers) {

@@ -33,4 +33,4 @@ ExampleMixins.Debug =
         if message.indexOf( Example.isDebug() ) isnt -1 or Example.isDebug() is "all"
           console.log "example:#{ message } ->", object
 
-Example.Debug.debug = false if Meteor.isServer
+ExampleMixins.Debug.debug = false if Meteor.isServer

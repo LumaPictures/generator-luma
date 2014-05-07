@@ -8,7 +8,6 @@ Package.on_use(function (api, where) {
     'underscore'
   ],[ 'client', 'server' ]);
 
-  // for helpers
   api.use([
     'jquery',
     'ui',

@@ -1,4 +1,4 @@
-# ## Utility Methods
+# # <%= classyName %> Utility
 <%= classyName %>Mixins.Utility =
   # ##### getTemplateInstance()
   getTemplateInstance: ->

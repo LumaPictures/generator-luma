@@ -76,8 +76,6 @@ Generator.prototype.createPackageFiles = function createPackageFiles() {
   this.writeTemplate('example/client/views/pages/home/home.html', path.join("example/client/views/pages/home/home.html"));
   this.writeTemplate('example/client/views/pages/home/home.coffee', path.join("example/client/views/pages/home/home.coffee"));
 
-  this.writeTemplate('example/packages/.gitignore', path.join("example/packages/.gitignore"));
-
   this.writeTemplate('example/server/lib/settings.coffee', path.join("example/server/lib/settings.coffee"));
 
   this.writeTemplate('example/public/README.md', path.join("example/public/README.md"));

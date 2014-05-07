@@ -16,9 +16,7 @@ Package.on_use(function (api, where) {
     'spacebars'
   ], [ 'client' ]);
 
-  api.export([
-    '<%= classyName %>'
-  ], ['client','server']);
+  api.export([], ['client','server']);
 
   api.add_files([
     'lib/<%= name %>.coffee'

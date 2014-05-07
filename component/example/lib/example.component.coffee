@@ -12,6 +12,7 @@ if Meteor.isClient
 
   # The code below is an example of how to some default options for display and language options.
   # `Example.defaultOptions = _.extend {}, ExampleOptions.display, ExampleOptions.language`
+  Example.defaultOptions = {}
 
   # The code below is an example of how to some preset options for dark and light layouts.
   # `Example.presetOptions = _.extend {}, ExampleOptions.darkLayout, ExampleOptions.lightLayout`
@@ -20,6 +21,7 @@ if Meteor.isClient
   #   "example-dark-layout":
   #     background: "#000000"
   #     color: "#FFFFFF"
+  Example.presetOptions = {}
 else if Meteor.isServer
   # Components are client only by default, but if you need to have a presence on the server you can define server mixins.
   # `ExampleComponent = _.extend {}, ExampleMixins.Debug`

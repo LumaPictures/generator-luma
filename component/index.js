@@ -36,6 +36,6 @@ Generator.prototype.createComponentFiles = function createComponentFiles() {
 
   this.writeTemplate('vendor/README.md', path.join( 'vendor/README.md' ));
 
-  this.writeTemplate('tests/component.options.mixin.test.coffee', path.join( 'test/' + this.name.toLowerCase() + '.options.mixin.coffee'));
-  this.writeTemplate('tests/component.template.mixin.test.coffee', path.join( 'test/' + this.name.toLowerCase() + '.template.mixin.coffee'));
+  this.writeTemplate('tests/component.options.mixin.test.coffee', path.join( 'tests/' + this.name.toLowerCase() + '.options.mixin.coffee'));
+  this.writeTemplate('tests/component.template.mixin.test.coffee', path.join( 'tests/' + this.name.toLowerCase() + '.template.mixin.coffee'));
 };

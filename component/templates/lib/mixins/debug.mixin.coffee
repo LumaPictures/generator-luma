@@ -33,4 +33,4 @@
         if message.indexOf( <%= classyName %>.isDebug() ) isnt -1 or <%= classyName %>.isDebug() is "all"
           console.log "<%= name %>:#{ message } ->", object
 
-<%= classyName %>.Debug.debug = false if Meteor.isServer
+<%= classyName %>Mixins.Debug.debug = false if Meteor.isServer

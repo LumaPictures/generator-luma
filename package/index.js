@@ -43,12 +43,12 @@ Generator.prototype.askForPackage = function askForPackage() {
     }];
 
   this.prompt(prompts, function (answers) {
-    this.description = answers.description;
-    this.authorName = answers.authorName;
-    this.authorEmail = answers.authorEmail;
-    this.authorWebsite = answers.authorWebsite;
-    this.owner = answers.owner;
-    this.repoName = answers.repoName;
+    this.description = answers.description || "An example package built by generator-luma.";
+    this.authorName = answers.authorName || "Austin Rivas";
+    this.authorEmail = answers.authorEmail || "austinrivas@gmail.com";
+    this.authorWebsite = answers.authorWebsite || "https://github.com/austinrivas";
+    this.owner = answers.owner || "LumaPictures";
+    this.repoName = answers.repoName || "example";
     cb();
   }.bind(this));
 };

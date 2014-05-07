@@ -3,10 +3,10 @@ environment = process.env.METEOR_ENV or "development"
 defaults =
   public:
     package:
-      name: "<%= name %>"
-      description: "<%= description %>"
-      owner: "<%= owner %>"
-      repo: "<%= repoName %>"
+      name: "example"
+      description: "An example package built by generator-luma."
+      owner: "LumaPictures"
+      repo: "example"
       absoluteUrl: Meteor.absoluteUrl()
   private: {}
 

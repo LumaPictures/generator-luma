@@ -13,4 +13,4 @@ coffeescript
 showdown
 luma-ui
 iron-router
-<%= name %>
+example

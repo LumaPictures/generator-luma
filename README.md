@@ -23,11 +23,14 @@ $ npm install -g yo
 
 ### The Best Instructions You'll See All Day
 
-To install generator-luma from npm, run:
+To install generator-luma run:
 
 ```
-$ npm install -g generator-luma
+$ git clone https://github.com/lumapictures/generator-luma
+$ cd generator-luma && npm link
 ```
+
+* Note : I plan on releasing this to NPM once I have formalized the structure
 
 Create a new project directory:
 
@@ -62,6 +65,12 @@ To generate a new Meteor Package use :
 $ yo luma:package yourPackageName
 ```
 
+To generate a new Meteor Component use :
+
+```
+$ yo luma:component yourComponentName
+```
+
 To generate a new Meteor Collection, try using:
 
 ```
@@ -72,6 +81,12 @@ To generate a new Meteor Template view/events/helper, try this one out:
 
 ```
 $ yo luma:view viewName
+```
+
+To generate a new Meteor Template Page, try this one out:
+
+```
+$ yo luma:page pageName
 ```
 
 These generators will be extended over time and I hope you make good use of them!
@@ -111,6 +126,4 @@ These generators will be extended over time and I hope you make good use of them
     smart.json <- meteorite package definition
 ```
 
-## License
-
-[MIT License](http://en.wikipedia.org/wiki/MIT_License)
+## [License](https://github.com/lumapictures/generator-luma/LICENSE)

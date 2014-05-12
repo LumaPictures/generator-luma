@@ -49,7 +49,6 @@ Add the following to your `package.js` `on_test` callback.
     'lib/components/<%= name %>/tests/<%= name %>.tests.coffee'
     /* ADD <%= classyName %>Component Tests here */
   ], [ 'client', 'server' ]);
-  /* END <%= classyName %>Component Tests */
 ```
 
 # Extend

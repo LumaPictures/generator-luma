@@ -11,10 +11,7 @@ if Meteor.isClient
     <%= classyName %>Mixins.Utility,
     <%= classyName %>Mixins.Debug
     # Add additional client mixin namespaces here
-
-  # The code below is an example of how to set some example default options for display and language options.
-  #
-  # `<%= classyName %>.defaultOptions = _.extend {}, <%= classyName %>Options.display, <%= classyName %>Options.language`
+  
   <%= classyName %>Component.defaultOptions = {}
 
 # Components are client only by default, but if you need to have a presence on the server you can define server mixins.

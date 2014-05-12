@@ -7,7 +7,6 @@ if Meteor.isClient
     <%= classyName %>Mixins.Destroy,
     <%= classyName %>Mixins.Options,
     <%= classyName %>Mixins.Selector,
-    <%= classyName %>Mixins.Template,
     <%= classyName %>Mixins.Utility,
     <%= classyName %>Mixins.Debug
     # Add additional client mixin namespaces here

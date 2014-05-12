@@ -36,5 +36,5 @@ Generator.prototype.createComponentFiles = function createComponentFiles() {
 
   this.writeTemplate('tests/component.test.coffee', path.join( 'tests/' + this.name.toLowerCase() + '.tests.coffee'));
 
-  this.writeTemplate('COMPONENT.md', path.join( this.name.toUpperCase() + '.md' ))
+  this.writeTemplate('COMPONENT.md', path.join( this.name + '.md' ))
 };

@@ -1,0 +1,17 @@
+<template name="example">
+    <div id="{{selector}}" class="example-container">
+        {{#if UI.contentBlock }}
+            {{> UI.contentBlock }}
+        {{else}}
+            {{#with chooseTemplate template }}
+                {{#with .. }}     {{! original arguments to example}}
+                    {{> .. }}     {{! return value from Template.example.chooseTemplate( template ) }}
+                {{/with}}
+            {{/with}}
+        {{/if}}
+    </div>
+</template>
+
+<template name="default_example_template">
+    <code class="{{../../styles}}">default_example_template needs to be setup</code>
+</template>

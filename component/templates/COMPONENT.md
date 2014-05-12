@@ -63,3 +63,14 @@ In order to extend this component with your own mixins you must.
 3. If you added a new mixin namespace you must extend the component in `lib/components/<%= name %>/lib/<%= name %>.component.coffee`
     at the location marked `# Add additional client mixin namespaces here` and `# Add additional client mixin namespaces here`
     depending on the intended use.
+
+## Vendor
+
+Any vendor assets must be placed in the vendor directory and included in you `package.js`
+
+```javascript
+  /* <%= classyName %>Component Vendor Assets */
+  api.add_files([
+    'lib/components/<%= name %>/vendor/example_vendor_file.min.js'
+  ], [ 'client' ]);
+```

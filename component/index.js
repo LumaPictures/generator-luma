@@ -30,12 +30,11 @@ Generator.prototype.createComponentFiles = function createComponentFiles() {
   this.writeTemplate('lib/mixins/options.mixin.coffee', path.join( 'lib/mixins/options.mixin.coffee' ));
   this.writeTemplate('lib/mixins/template.mixin.coffee', path.join( 'lib/mixins/template.mixin.coffee' ));
 
-  this.writeTemplate('lib/options/component.option.coffee', path.join( 'lib/options/' + this.name.toLowerCase() + '.option.coffee'));
-
   this.writeTemplate('lib/plugins/README.md', path.join( 'lib/plugins/README.md' ));
 
   this.writeTemplate('vendor/README.md', path.join( 'vendor/README.md' ));
 
-  this.writeTemplate('tests/component.options.mixin.test.coffee', path.join( 'tests/' + this.name.toLowerCase() + '.options.mixin.test.coffee'));
-  this.writeTemplate('tests/component.template.mixin.test.coffee', path.join( 'tests/' + this.name.toLowerCase() + '.template.mixin.test.coffee'));
+  this.writeTemplate('tests/component.test.coffee', path.join( 'tests/' + this.name.toLowerCase() + '.tests.coffee'));
+
+  this.writeTemplate('COMPONENT.md', path.join( this.name.toUpperCase() + '.md' ))
 };

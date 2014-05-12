@@ -5,6 +5,8 @@ var yeoman = require('yeoman-generator');
 var Generator = module.exports = function Generator() {
   yeoman.generators.NamedBase.apply(this, arguments);
   this.classyName = this._.classify(this.name);
+  this.upperName = this.name.toUpperCase();
+  this.lowerName = this.name.toLowerCase();
 };
 
 util.inherits(Generator, yeoman.generators.NamedBase);

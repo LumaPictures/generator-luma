@@ -28,3 +28,6 @@ Template.<%= name %>.destroyed = ->
   instantiatedComponent = templateInstance.__component__
   instantiatedComponent.destroy()
   instantiatedComponent.log "destroyed", @
+
+# ##### events()
+Template.<%= name %>.events = {}

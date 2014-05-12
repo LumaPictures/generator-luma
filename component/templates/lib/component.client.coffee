@@ -31,3 +31,6 @@ Template.<%= name %>.destroyed = ->
 
 # ##### events()
 Template.<%= name %>.events = {}
+
+# ##### helpers()
+Template.<%= name %>.helpers = {}

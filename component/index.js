@@ -28,7 +28,6 @@ Generator.prototype.createComponentFiles = function createComponentFiles() {
   this.writeTemplate('lib/mixins/utility.mixin.coffee', path.join( 'lib/mixins/utility.mixin.coffee' ));
   this.writeTemplate('lib/mixins/selector.mixin.coffee', path.join( 'lib/mixins/selector.mixin.coffee' ));
   this.writeTemplate('lib/mixins/options.mixin.coffee', path.join( 'lib/mixins/options.mixin.coffee' ));
-  this.writeTemplate('lib/mixins/template.mixin.coffee', path.join( 'lib/mixins/template.mixin.coffee' ));
 
   this.writeTemplate('lib/plugins/README.md', path.join( 'lib/plugins/README.md' ));
 

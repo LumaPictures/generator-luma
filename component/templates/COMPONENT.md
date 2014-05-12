@@ -13,7 +13,7 @@ In order to include this component in your package you must add the following to
   ], [ 'client', 'server' ]);
 
   api.add_files([
-    'lib/components/<%= name %>/lib/mixins/<%= name %>.mixin.coffee',
+    'lib/components/<%= name %>/lib/mixins/base.mixin.coffee',
     'lib/components/<%= name %>/lib/mixins/debug.mixin.coffee'
   ], [ 'client', 'server']);
 

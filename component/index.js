@@ -21,7 +21,7 @@ Generator.prototype.createComponentFiles = function createComponentFiles() {
   this.writeTemplate('lib/component.server.coffee', path.join( 'lib/' + this.name.toLowerCase() + '.server.coffee'));
   this.writeTemplate('lib/component.component.coffee', path.join( 'lib/' + this.name.toLowerCase() + '.component.coffee'));
 
-  this.writeTemplate('lib/mixins/component.mixin.coffee', path.join( 'lib/mixins/' + this.name.toLowerCase() + '.mixin.coffee' ));
+  this.writeTemplate('lib/mixins/base.mixin.coffee', path.join( 'lib/mixins/base.mixin.coffee' ));
   this.writeTemplate('lib/mixins/initialize.mixin.coffee', path.join( 'lib/mixins/initialize.mixin.coffee' ));
   this.writeTemplate('lib/mixins/destroy.mixin.coffee', path.join( 'lib/mixins/destroy.mixin.coffee' ));
   this.writeTemplate('lib/mixins/debug.mixin.coffee', path.join( 'lib/mixins/debug.mixin.coffee' ));

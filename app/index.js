@@ -1,114 +1,61 @@
-'use strict';
-var util = require('util');
+'use strict'
 var path = require('path');
+var util = require('util');
 var yeoman = require('yeoman-generator');
+var scriptBase = require('../script-base.js');
 
-//construct generator
-var Generator = module.exports = function Generator(args, options) {
-  //retrieve additional arguments, inheritance in js???!
-  yeoman.generators.Base.apply(this, arguments);
-  this.argument('appname', {type: String, required: false});
-  //set appname from argument-defined appname or get the path
-  this.appname = this.appname || path.basename(process.cwd());
-  //clean appname up to use as a variable
-  this.appname = this._.camelize(this._.slugify(this._.humanize(this.appname)));
+var Generator = module.exports = function Generator() {
+  scriptBase.apply(this, arguments);
+  // calling NamedBase allows us to retrieve the name argument associated with
+  // yo meteor:package name, and set it to this.name *magic*
+  yeoman.generators.NamedBase.apply(this, arguments);
+  this.sourceRoot(path.join(__dirname, 'templates'));
 };
 
-util.inherits(Generator, yeoman.generators.Base);
-
-Generator.prototype.welcome = function welcome() {
-  // welcome message
-  console.log(this.yeoman);
-};
+util.inherits(Generator, scriptBase);
 
 Generator.prototype.askFor = function askFor() {
   var cb = this.async(),
     prompts = [{
-      type: 'confirm',
-      name: 'ironRouter',
-      message: 'Shall we include Iron Router?',
-      default: true
+      type: 'input',
+      name: 'repoName',
+      message: 'What is the name of this GitHub repo?'
     }, {
-      type: 'confirm',
-      name: 'bootstrap',
-      message: 'Shall we include Bootstrap with LESS?',
-      default: true
+      type: 'input',
+      name: 'owner',
+      message: 'What GitHub account owns this repo?'
+    }, {
+      type: 'input',
+      name: 'description',
+      message: 'How would you describe this app?'
     }];
 
   this.prompt(prompts, function (answers) {
-    this.ironRouter = answers.ironRouter;
-    this.bootstrap = answers.bootstrap;
+    this.repoName = answers.repoName || "example";
+    this.owner = answers.owner || "LumaPictures";
+    this.description = answers.description || "A lame description"
     cb();
   }.bind(this));
 };
 
-// generate the basic scaffolding for a Meteor project
-Generator.prototype.app = function app() {
-  this.mkdir('client');
-  this.mkdir('client/compatibility');
-  this.mkdir('client/styles');
-  this.mkdir('client/lib');
-  this.mkdir('client/views');
-  this.mkdir('client/views/common');
-  this.mkdir('lib');
-  this.mkdir('server');
-  this.mkdir('server/lib');
-  this.mkdir('public');
-  this.mkdir('public/fonts');
-  this.mkdir('public/images');
-  this.mkdir('private');
-  this.mkdir('packages');
-  this.mkdir('.meteor');
+Generator.prototype.createApp = function createApp() {
+  this.writeTemplate('meteor-luma.config.sh', path.join('meteor-luma.config.sh'));
+  this.writeTemplate('smart.json', path.join('smart.json'));
+  this.writeTemplate('README.md', path.join('README.md'));
+  this.writeTemplate('.gitignore', path.join('.gitignore'));
+  this.writeTemplate('tests/app.tests.coffee', path.join('tests/', this.name.toLowerCase() + '.tests.coffee'));
+  this.writeTemplate('routes.coffee', path.join('routes.coffee'));
 
-  this.copy('client/client.js', 'client/client.js');
-  this.copy('client/lib/subscriptions.js', 'client/lib/subscriptions.js');
-  this.copy('client/views/home.js', 'client/views/home.js');
-  this.copy('client/views/home.html', 'client/views/home.html');
-  this.copy('client/views/common/loading.html', 'client/views/common/loading.html');
-  this.copy('lib/collections.js', 'lib/collections.js');
-  this.copy('public/robots.txt', 'public/robots.txt');
-  this.copy('server/publications.js', 'server/publications.js');
-  this.copy('server/server.js', 'server/server.js');
-  this.copy('server/security.js', 'server/security.js');
-  this.copy('.meteor/gitignore', '.meteor/.gitignore');
-  this.copy('.meteor/release', '.meteor/release');
-  this.copy('gitignore', '.gitignore');
-  this.copy('LICENSE', 'LICENSE');
-  this.copy('README.md', 'README.md');
-};
+  this.writeTemplate('.meteor/.gitignore', path.join(".meteor/.gitignore"));
+  this.writeTemplate('.meteor/packages', path.join(".meteor/packages"));
 
-var packages = [
-  'standard-app-packages'
-];
+  this.writeTemplate('client/index.html', path.join('client/index.html'));
+  this.writeTemplate('client/lib/app.controller.coffee', path.join("client/lib/app.controller.coffee"));
+  this.writeTemplate('client/main.less', path.join("client/main.less"));
+  this.writeTemplate('client/views/pages/home/home.html', path.join("client/views/pages/home/home.html"));
+  this.writeTemplate('client/views/pages/home/home.coffee', path.join("client/views/pages/home/home.coffee"));
 
-var smartPackages = {
-  "packages": {}
-};
+  this.writeTemplate('server/lib/settings.coffee', path.join("server/lib/settings.coffee"));
 
-Generator.prototype.addRouter = function addRouter() {
-  if (this.ironRouter) {
-    this.copy('client/routes.js', 'client/routes.js');
-    this.copy('iron-router/layout.html', 'client/views/layout.html');
-    packages.push('iron-router');
-    smartPackages.packages["iron-router"] = {};
-  } else {
-    this.copy('client/views/layout.html', 'client/views/layout.html');
-  }
-};
-
-Generator.prototype.addBootstrap = function addBootstrap() {
-  if (this.bootstrap) {
-    this.copy('bootstrap/theme.less', 'client/styles/theme.less');
-    this.copy('public/images/bg.jpg', 'public/images/bg.jpg');
-    packages.push('less');
-    packages.push('bootstrap3-less');
-    smartPackages.packages["bootstrap3-less"] = {};
-  } else {
-    this.copy('client/styles/theme.css', 'client/styles/theme.css');
-  }
-};
-
-Generator.prototype.done = function done() {
-  this.write('.meteor/packages', packages.join('\n'));
-  this.write('smart.json', JSON.stringify(smartPackages, null, 2));
+  this.writeTemplate('public/README.md', path.join("public/README.md"));
 };

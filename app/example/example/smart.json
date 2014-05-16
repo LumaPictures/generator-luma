@@ -1,0 +1,8 @@
+{
+  "packages": {
+    "example": {
+      "path": ".."
+    },
+    "luma-ui": {}
+  }
+}

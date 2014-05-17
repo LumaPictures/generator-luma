@@ -15,6 +15,7 @@ var Generator = module.exports = function Generator() {
 util.inherits(Generator, scriptBase);
 
 Generator.prototype.askForMixin = function askForMixin() {
+  console.log("Be sure to run this generator from your components root directory.");
   var cb = this.async();
   var prompts = [{
     type: 'input',
@@ -29,5 +30,5 @@ Generator.prototype.askForMixin = function askForMixin() {
 };
 
 Generator.prototype.createMixinFiles = function createMixinFiles() {
-  this.writeTemplate('mixin.coffee', path.join( 'mixins/' + this.name + '.mixin.coffee'));
+  this.writeTemplate('mixin.coffee', path.join( 'lib/mixins/' + this.name + '.mixin.coffee'));
 };

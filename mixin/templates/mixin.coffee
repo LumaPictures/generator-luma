@@ -5,7 +5,7 @@
 ###
   ```coffeescript
     class Whatever extends Component
-      @extend <%= containerObject %>.<%= classyName %>
+      @extend <%= containerObject %>.<%= name %>
   ```
 ###
 
@@ -14,14 +14,14 @@
 ###
   ```coffeescript
     class Whatever extends Component
-      @extend <%= containerObject %>.<%= classyName %>
+      @extend <%= containerObject %>.<%= name %>
       constructor: ( context = {} ) ->
         @data.instanceProperty = @instanceProperty
         super
   ```
 ###
 
-<%= containerObject %>.<%= classyName %> =
+<%= containerObject %>.<%= name %> =
 ###
   classMethod: -> return "example"
   classProperty: "example"

@@ -5,6 +5,7 @@ A [Meteor](http://meteor.com) project generator for Luma Pictures.
 [![NPM](https://nodei.co/npm/generator-luma.png)](https://nodei.co/npm/generator-luma/)
 
 ## Prerequisites
+* [Meteor](https://github.com/meteor/meteor)
 * [Meteorite](https://github.com/oortcloud/meteorite)
 * [nodejs](http://nodejs.com)
 * [yeoman](http://yeoman.io)
@@ -53,8 +54,7 @@ Finally, run Meteor:
 $ meteor
 ```
 
-## View and Collection Generators
-generator-luma now supports primitive scaffolding using Yeoman sub-generators
+## Generators
 
 To generator a new generator use :
 

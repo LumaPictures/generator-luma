@@ -2,10 +2,10 @@
 # What's your app name?
 APP_NAME="example"
 
-REPO_NAME="example"
+REPO_NAME="meteor-example"
 
 # What's your project's Git repo?
-GIT_URL="git://github.com/LumaPictures/example"
+GIT_URL="git://github.com/LumaPictures/meteor-example"
 
 # IP or URL of the server you want to deploy to
 APP_HOST="sv-nodedev01"

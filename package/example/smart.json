@@ -1,9 +1,9 @@
 {
   "name": "example",
-  "description": "An example package built by generator-luma.",
-  "homepage": "https://github.com/LumaPictures/example",
+  "description": "Awesome.",
+  "homepage": "https://github.com/LumaPictures/meteor-example",
   "author": "Austin Rivas <austinrivas@gmail.com> (https://github.com/austinrivas)",
   "version": "0.0.1",
-  "git": "https://github.com/LumaPictures/example",
+  "git": "https://github.com/LumaPictures/meteor-example",
   "packages": {}
 }

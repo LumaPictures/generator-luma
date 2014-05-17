@@ -1,5 +1,5 @@
 Package.describe({
-  summary: "An example package built by generator-luma."
+  summary: "Awesome."
 });
 
 Package.on_use(function (api, where) {
@@ -8,6 +8,7 @@ Package.on_use(function (api, where) {
     'underscore'
   ],[ 'client', 'server' ]);
 
+  // for helpers
   api.use([
     'jquery',
     'ui',

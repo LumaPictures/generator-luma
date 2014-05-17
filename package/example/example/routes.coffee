@@ -4,10 +4,10 @@ Router.addRoutes [{
   controller: "ExampleController"
   page:
     title: "example"
-    subtitle: "An example package built by generator-luma."
+    subtitle: "Awesome."
 },{
   route: 'gitHub'
-  path: "https://github.com/LumaPictures/example"
+  path: "https://github.com/LumaPictures/meteor-example"
   external: true
   page:
     title: "GitHub"
@@ -17,14 +17,14 @@ Router.addRoutes [{
     icon: 'icon-github'
 },{
   route: 'reportBugs'
-  path: "https://github.com/LumaPictures/example/issues/new"
+  path: "https://github.com/LumaPictures/meteor-example/issues/new"
   external: true
   page:
     title: "Report Bugs"
     subtitle: "GitHub Issues"
 },{
   route: 'source'
-  path: "http://LumaPictures.github.io/example/"
+  path: "http://LumaPictures.github.io/meteor-example/"
   external: true
   page:
     title: "Annotated Source"
@@ -34,7 +34,7 @@ Router.addRoutes [{
     icon: 'icon-code'
 },{
   route: 'build'
-  path: "https://travis-ci.org/LumaPictures/example"
+  path: "https://travis-ci.org/LumaPictures/meteor-example"
   external: true
   page:
     title: "Build Status"

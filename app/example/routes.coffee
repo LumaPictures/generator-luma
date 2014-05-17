@@ -4,7 +4,7 @@ Router.addRoutes [{
   controller: "AppController"
   page:
     title: "example"
-    subtitle: "A lame description"
+    subtitle: "Awesome."
 }]
 
 Router.initialize()

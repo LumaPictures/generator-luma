@@ -1,19 +1,19 @@
-# example [![Build Status](https://travis-ci.org/LumaPictures/example.svg?branch=master)](https://travis-ci.org//LumaPictures/example)
-### An example package built by generator-luma.
+# example [![Build Status](https://travis-ci.org/LumaPictures/meteor-example.svg?branch=master)](https://travis-ci.org/LumaPictures/meteor-example)
+### Awesome.
 
 ## [Live Example](http://example.meteor.com)
 
 ## Local Example
 ```
-$ git clone https://github.com/LumaPictures/example
-$ cd LumaPictures/example
+$ git clone https://github.com/LumaPictures/meteor-example
+$ cd LumaPictures/meteor-example
 $ mrt && meteor
 ```
 
 ## Local Tests
 ```
-$ git clone https://github.com/LumaPictures/example
-$ cd LumaPictures/example
+$ git clone https://github.com/LumaPictures/meteor-example
+$ cd LumaPictures/meteor-example
 $ mrt && meteor test-packages example
 ```
 

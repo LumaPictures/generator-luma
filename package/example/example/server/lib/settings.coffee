@@ -4,9 +4,9 @@ defaults =
   public:
     package:
       name: "example"
-      description: "An example package built by generator-luma."
+      description: "Awesome."
       owner: "LumaPictures"
-      repo: "example"
+      repo: "meteor-example"
       absoluteUrl: Meteor.absoluteUrl()
   private: {}
 

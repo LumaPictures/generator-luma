@@ -58,17 +58,17 @@ Generator.prototype.createPackageFiles = function createPackageFiles() {
   this.writeTemplate('package.js', path.join('package.js'));
   this.writeTemplate('README.md', path.join('README.md'));
   this.writeTemplate('LICENSE.md', path.join('LICENSE.md'));
-  this.writeTemplate('.travis.yml', path.join('.travis.yml'));
-  this.writeTemplate('.groc.json', path.join('.groc.json'));
-  this.writeTemplate('.gitignore', path.join('.gitignore'));
+  this.writeTemplate('travis.yml', path.join('.travis.yml'));
+  this.writeTemplate('groc.json', path.join('.groc.json'));
+  this.writeTemplate('gitignore', path.join('.gitignore'));
   this.writeTemplate('lib/package.coffee', path.join('lib/', this.name.toLowerCase() + '.coffee'));
   this.writeTemplate('tests/package.test.coffee', path.join('tests/', this.name.toLowerCase() + '.test.coffee'));
 
   this.writeTemplate('example/smart.json', path.join('example/smart.json'));
   this.writeTemplate('example/routes.coffee', path.join('example/routes.coffee'));
 
-  this.writeTemplate('example/.meteor/.gitignore', path.join("example/.meteor/.gitignore"));
-  this.writeTemplate('example/.meteor/packages', path.join("example/.meteor/packages"));
+  this.writeTemplate('example/meteor/gitignore', path.join("example/.meteor/.gitignore"));
+  this.writeTemplate('example/meteor/packages', path.join("example/.meteor/packages"));
 
   this.writeTemplate('example/client/index.html', path.join('example/client/index.html'));
   this.writeTemplate('example/client/lib/example.controller.coffee', path.join("example/client/lib/example.controller.coffee"));

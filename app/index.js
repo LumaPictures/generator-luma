@@ -42,12 +42,12 @@ Generator.prototype.createApp = function createApp() {
   this.writeTemplate('meteor-luma.config.sh', path.join('meteor-luma.config.sh'));
   this.writeTemplate('smart.json', path.join('smart.json'));
   this.writeTemplate('README.md', path.join('README.md'));
-  this.writeTemplate('.gitignore', path.join('.gitignore'));
+  this.writeTemplate('gitignore', path.join('.gitignore'));
   this.writeTemplate('tests/app.tests.coffee', path.join('tests/', this.name.toLowerCase() + '.tests.coffee'));
   this.writeTemplate('routes.coffee', path.join('routes.coffee'));
 
-  this.writeTemplate('.meteor/.gitignore', path.join(".meteor/.gitignore"));
-  this.writeTemplate('.meteor/packages', path.join(".meteor/packages"));
+  this.writeTemplate('meteor/gitignore', path.join(".meteor/.gitignore"));
+  this.writeTemplate('meteor/packages', path.join(".meteor/packages"));
 
   this.writeTemplate('client/index.html', path.join('client/index.html'));
   this.writeTemplate('client/lib/app.controller.coffee', path.join("client/lib/app.controller.coffee"));

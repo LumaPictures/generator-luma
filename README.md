@@ -26,11 +26,8 @@ $ npm install -g yo
 To install generator-luma run:
 
 ```
-$ git clone https://github.com/lumapictures/generator-luma
-$ cd generator-luma && npm link
+$ npm install -g generator-luma
 ```
-
-* Note : I plan on releasing this to NPM once I have formalized the structure
 
 Create a new project directory:
 
@@ -41,13 +38,13 @@ $ mkdir your-new-project && cd $_
 Initiate the generator:
 
 ```
-$ yo luma
+$ yo luma:app appName
 ```
 
 Sync the smart.json packages using Meteorite:
 
 ```
-$ mrt update
+$ mrt install
 ```
 
 Finally, run Meteor:
@@ -59,6 +56,12 @@ $ meteor
 ## View and Collection Generators
 generator-luma now supports primitive scaffolding using Yeoman sub-generators
 
+To generator a new generator use :
+
+```
+$ yo luma:gen yourGenerator
+```
+
 To generate a new Meteor Package use :
 
 ```
@@ -69,6 +72,12 @@ To generate a new Meteor Component use :
 
 ```
 $ yo luma:component yourComponentName
+```
+
+To generator a new Component Mixin use :
+
+```
+$ yo luma:mixin yourMixin
 ```
 
 To generate a new Meteor Collection, try using:
@@ -90,40 +99,5 @@ $ yo luma:page pageName
 ```
 
 These generators will be extended over time and I hope you make good use of them!
-
-## Structure Generated with Iron-Router Enabled
-```
-/
-    .meteor/
-        .gitignore
-        packages
-        release
-    client/
-        compatibility/
-        lib/
-            subscriptions.js
-        styles/
-            theme.css
-        views/
-            common/
-            home.html
-            home.js
-            layout.html
-        routes.js
-    lib/
-        collections.js
-    private/
-    public/
-        fonts/
-        images/
-        robots.txt
-    server/
-        publications.js
-        security.js
-        server.js
-    .gitignore <- contains sensible defaults for files/folders to ignore
-    LICENSE <- default empty license file
-    smart.json <- meteorite package definition
-```
 
 ## [License](https://github.com/lumapictures/generator-luma/LICENSE)

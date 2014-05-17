@@ -3,12 +3,14 @@
   "version": "0.0.1",
   "description": "A Meteor app generator for Luma Pictures",
   "keywords": [
-    "luma-generator",
+    "meteor",
+    "generator-meteor",
+    "generator-luma",
     "luma ui",
     "luma"
   ],
-  "homepage": "https://github.com/lumapictures/generator-luma",
-  "bugs": "https://github.com/Pent/generator-luma/issues",
+  "homepage": "https://github.com/LumaPictures/generator-luma",
+  "bugs": "https://github.com/LumaPictures/generator-luma/issues",
   "author": {
     "name": "austinrivas",
     "email": "austinrivas@gmail.com",
@@ -17,7 +19,7 @@
   "main": "app/index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/lumapictures/generator-luma.git"
+    "url": "git://github.com/LumaPictures/generator-luma.git"
   },
   "scripts": {
     "test": "mocha"
